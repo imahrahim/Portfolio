@@ -1,0 +1,27 @@
+:root {
+  --bg: #f3f3f3;
+  --text: #111111;
+  --card: #dde6eb;
+  --line: #cfcfcf;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: sans-serif;
+}
+
+pre {
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+
+.app {
+  min-height: 100vh;
+}

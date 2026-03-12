@@ -1,0 +1,138 @@
+/* Fixed Name */
+
+.fixed-name {
+  position: fixed;
+  top: 28px;
+  left: 34px;
+  z-index: 20;
+}
+
+.fixed-name h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Fixed CV */
+
+.fixed-cv {
+  position: fixed;
+  top: 150px;
+  left: 0px;
+  z-index: 10;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.code-block {
+  display: flex;
+  flex-direction: column;
+  min-width: max-content;
+}
+
+.code-line {
+  display: grid;
+  grid-template-columns: 34px auto;
+  column-gap: 10px;
+  align-items: start;
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: 9px;
+  line-height: 1.2;
+}
+
+.code-number {
+  color: #9a9a9a;
+  text-align: right;
+  user-select: none;
+}
+
+.code-text {
+  position: relative;
+  color: #111111;
+  padding-left: calc(var(--indent) * 18px);
+  min-height: 1.2em;
+}
+
+.code-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(var(--indent) * 18px);
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    to right,
+    transparent 0,
+    transparent 16px,
+    rgba(0, 0, 0, 0.08) 16px,
+    rgba(0, 0, 0, 0.08) 17px
+  );
+  pointer-events: none;
+}
+
+.code-comment {
+  color: #8f8f8f;
+}
+
+.fixed-cv::-webkit-scrollbar {
+  height: 6px;
+}
+
+.fixed-cv::-webkit-scrollbar-thumb {
+  background: #c8c8c8;
+}
+
+.fixed-cv::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Fixed Skills */
+
+.fixed-skills {
+  position: fixed;
+  top: 150px;
+  right: 40px;
+  width: 270px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.fixed-skills pre {
+  font-family: monospace;
+  font-size: 9px;
+  line-height: 1.2;
+}
+
+/* .fixed-skills {
+  position: fixed;
+  top: 150px;
+  right: 40px;
+  width: 270px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.fixed-skills pre {
+  font-family: monospace;
+  font-size: 9px;
+  line-height: 1.2;
+}
+
+.skills-dynamic {
+  animation: skillFade 220ms ease;
+}
+
+@keyframes skillFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */

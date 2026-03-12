@@ -1,0 +1,105 @@
+.flow-layout {
+  position: relative;
+}
+
+/* ---------------------------------- */
+/* MOBILE DEFAULT                     */
+/* Name -> Skills(sticky) -> Cards    */
+/* CV still fixed if enough height    */
+/* ---------------------------------- */
+
+@media (max-width: 768px) {
+  .fixed-name {
+    position: static;
+    width: auto;
+    margin: 28px 20px 24px 20px;
+  }
+
+  .fixed-skills {
+    position: sticky;
+    top: 20px;
+    width: auto;
+    gap: 18px;
+    z-index: 15;
+    padding-bottom: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .fixed-cv {
+    position: fixed;
+    top: 150px;
+    left: 0;
+    margin: 0;
+  }
+
+  .code-block {
+    min-width: 100%;
+  }
+
+  .code-line {
+    grid-template-columns: 28px minmax(0, 1fr);
+    white-space: normal;
+    font-size: 9px;
+    line-height: 1.35;
+  }
+
+  .code-text {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    min-width: 0;
+  }
+
+  .code-text::before {
+    display: none;
+  }
+
+  .content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .cards-section {
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 24px;
+    margin-bottom: 56px;
+  }
+
+  .card {
+    min-height: 160px;
+  }
+
+  .fixed-name h1 {
+    font-size: 16px;
+  }
+
+  .fixed-skills pre {
+    font-size: 9px;
+  }
+}
+
+/* ---------------------------------- */
+/* SMALL MOBILE OR LOW MOBILE HEIGHT  */
+/* CV becomes normal flow             */
+/* Skills stay sticky until CV starts */
+/* ---------------------------------- */
+
+@media (max-width: 768px), (max-height: 750px) {
+  .fixed-cv {
+    position: static;
+    width: auto;
+    margin: 28px 20px 8px 20px;
+    overflow-x: hidden;
+  }
+
+  .fixed-skills {
+    position: sticky;
+    top: 20px;
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 32px;
+    padding-bottom: 0;
+  }
+}
