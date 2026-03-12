@@ -1,23 +1,28 @@
+import "./index.css";
+import FixedName from "./components/FixedName";
+import FixedCV from "./components/FixedCV";
+import FixedSkills from "./components/FixedSkills";
+import Card from "./components/Card";
+
 function App() {
-
   return (
-    <div style={{padding:"60px"}}>
+    <div className="app">
+      <FixedName />
+      <FixedCV />
+      <FixedSkills />
 
-      <h1 style={{fontSize:"40px"}}>
-        Imah Rahim
-      </h1>
-
-      <p style={{marginTop:"10px", opacity:0.7}}>
-        Data Science · Data Visualisation · Design
-      </p>
-
-      <div style={{marginTop:"80px"}}>
-        <h2>Projects</h2>
-      </div>
-
+      <main className="content">
+        <section className="cards-section">
+          <Card title="Project 01" />
+          <Card title="Project 02" />
+          <Card title="Project 03" />
+          <Card title="Project 04" />
+          <Card title="Project 05" />
+          <Card title="Project 06" />
+        </section>
+      </main>
     </div>
-  )
-
+  );
 }
 
-export default App
+export default App;
