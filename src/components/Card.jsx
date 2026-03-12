@@ -1,6 +1,6 @@
-function Card({ title }) {
+function Card({ title, onClick }) {
   return (
-    <article className="card">
+    <article className="card" onClick={onClick}>
       <h2>{title}</h2>
     </article>
   );

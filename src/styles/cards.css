@@ -26,6 +26,8 @@
   min-height: 185px;
   background: var(--card);
   padding: 18px;
+  cursor: pointer;
+  transition: opacity 180ms ease;
 }
 
 .card h2 {
